@@ -17,7 +17,7 @@ import com.suhyeon.ex.command.BWriteCommand;
 
 @Controller
 public class BController {
-
+	
 	BCommand command = null;
 	
 	@RequestMapping(value = "/list")
@@ -30,7 +30,7 @@ public class BController {
 	}
 	
 	@RequestMapping(value = "/write_view")
-	public String write_view() {
+	public String write_view(Model model) {
 		
 		return "write_view";
 	}
@@ -41,7 +41,7 @@ public class BController {
 		model.addAttribute("request", request);
 		
 		command = new BContentCommand();
-		command.excute(model);
+		command.excute(model);	
 		
 		return "content_view";
 	}
@@ -52,7 +52,8 @@ public class BController {
 		model.addAttribute("request", request);
 		
 		command = new BReplyViewCommand();
-		command.excute(model);
+		command.excute(model);	
+		
 		return "reply_view";
 	}
 	
@@ -62,7 +63,7 @@ public class BController {
 		model.addAttribute("request", request);
 		
 		command = new BWriteCommand();
-		command.excute(model);
+		command.excute(model);		
 		
 		return "redirect:list";
 	}
@@ -95,7 +96,7 @@ public class BController {
 		model.addAttribute("request", request);
 		
 		command = new BReplyCommand();
-		command.excute(model);
+		command.excute(model);	
 		
 		return "redirect:list";
 	}

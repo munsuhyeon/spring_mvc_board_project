@@ -14,21 +14,22 @@ public class BReplyCommand implements BCommand {
 	@Override
 	public void excute(Model model) {
 		// TODO Auto-generated method stub
-		Map<String, Object> map = model.asMap();
 		
-		HttpServletRequest request = (HttpServletRequest) map.get("request");
+		Map<String, Object> map = model.asMap();		
+		HttpServletRequest request = (HttpServletRequest) map.get("request");		
 		
-		String bId = request.getParameter("bId");
-		String bName = request.getParameter("bName");
-		String bTitle = request.getParameter("bTitle");
-		String bContent = request.getParameter("bContent");
-		String bGroup = request.getParameter("bGroup");
-		String bStept = request.getParameter("bStept");
-		String bIndent = request.getParameter("bIndent");
+		String bId = request.getParameter("bid");
+		String bName = request.getParameter("bname");
+		String bTitle = request.getParameter("btitle");
+		String bContent = request.getParameter("bcontent");
+		String bGroup = request.getParameter("bgroup");
+		String bStep = request.getParameter("bstep");
+		String bIndent = request.getParameter("bindent");
 		
 		BDao dao = new BDao();
 		
-		dao.reply(bId, bName, bTitle, bContent, bGroup, bStept, bIndent);
+		dao.reply(bId, bName, bTitle, bContent, bGroup, bStep, bIndent);
+		
 	}
 
 }

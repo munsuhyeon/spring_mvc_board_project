@@ -12,11 +12,11 @@
 	<hr>
 	<table width="1000" cellpadding="0" cellspacing="0" border="1">
 		<tr>
-			<td align="center">번호</td>
-			<td align="center">글쓴이</td>
-			<td align="center">글제목</td>
-			<td align="center">등록일</td>
-			<td align="center">조회수</td>
+			<td align="center" bgcolor="#EAEAEA">번호</td>
+			<td align="center" bgcolor="#EAEAEA">글쓴이</td>
+			<td align="center" bgcolor="#EAEAEA">글제목</td>
+			<td align="center" bgcolor="#EAEAEA">등록일</td>
+			<td align="center" bgcolor="#EAEAEA">조회수</td>
 		</tr>
 		<c:forEach items="${list }" var="dto">
 		<tr>
